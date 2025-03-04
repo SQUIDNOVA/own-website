@@ -64,8 +64,9 @@
         flex-direction: column;
         color: white;
         justify-content: center;
-        align-items: start;
+        align-items: center;
         height: 100vh;
+        width: 100vw;
         background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)) , 
         url('img/discusionPhoto.jpeg') ,no-repeat ;
         background-size: cover;
@@ -123,6 +124,7 @@
         justify-content: flex-start;
         align-items: center;
         gap: 2rem;
+        width: 100vw;
         font-size: 1rem;
     }
 
@@ -227,5 +229,233 @@
         color: black;
     }
 
-    
+    /* team style code */
+
+    .team
+    {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        overflow: scroll;
+        padding: 3rem 6rem;
+        border-radius: 1rem;
+    }
+
+    .founderhead
+    {
+        font-size: 5rem;
+    }
+
+    .teamcontainer
+    {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .teamblock
+    {
+        box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+        border-radius: 1rem;
+    }
+
+    .teamblock img
+    {
+        border-radius: 1rem 1rem 0 0;
+        width: 25rem;
+        height: 33rem;
+        object-fit: cover;
+    }
+
+    .teamblock h2
+    {
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 2rem;
+    }
+
+    .teamblock p
+    {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .links
+    {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+
+    .links a
+    {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 2rem;
+    }
+
+    .links a:hover
+    {
+        color: black;
+    }
+
+    /* team style */
+
+    /* project page styles */
+
+
+    .Projects
+    {
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        gap: 2rem;
+        padding: 3rem 6rem;
+    }
+
+    .Project img
+    {
+        height: 20rem;
+        width: 30rem;
+        border-radius: 1rem;
+        object-fit: cover;
+    }
+
+    .projectcontainer
+    {
+        display: flex;
+        height: 96vh;
+        gap: 2rem;
+        grid-template-columns: repeat(6, 1fr);
+
+    }
+
+    /* contact style */
+
+
+    .contact
+    {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        gap: 6rem;
+        padding: 3rem 6rem;
+        border-radius: 1rem;
+    }
+
+    hr
+    {
+        top: 2rem;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .firstcontainer
+    {
+        display: flex;
+        gap: 2rem;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .firstblock
+    {
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    input
+    {
+        width: 26rem;
+        padding: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .number
+    {
+        display: flex;
+        gap: 1em;
+    }
+
+    .secondblock
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 50%;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .secondblock a
+    {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1rem 2rem;
+        border-radius: 3rem;
+        text-decoration: none;
+        transition: 0.3s;
+        text-align: center;
+    }
+
+    .secondblock a:hover
+    {
+        color: #f4f4f4;
+        background-color: black;
+        transform: translateY(-3px);
+    }
+
+    #subject
+    {
+        height: 10rem;
+    }
+
+    .contactlinks
+    {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .contactlinks a
+    {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 2rem;
+        text-decoration: none;
+        padding: 1rem;
+        border-radius: 100%;
+        transition: 0.3s;
+        text-align: center;
+    }
+
+    .contactlinks a:hover
+    {
+        transform: translateY(-3px);
+
+    }
+
+    .contactlinks a:hover
+    {
+        color: black;
+    }
 }
