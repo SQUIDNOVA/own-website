@@ -3,12 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SquidNova</title>
+    <title>Squidnova</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon_io (1)/android-chrome-512x512.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("coVHstLmfN0dQ_z-r");
+        })();
+    </script>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="script.js"></script>
+
 </head>
 <body>
-    <div class="mainbody">
-        <h1>Thanks for your intrest on us the team will contact you within 24 Hrs</h1>
-    </div>
+
+    <!-- nav bar code -->
+
+    <header class="header">
+        <div class="bar1">
+            <a href="index.html"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div class="bar2">
+            <a href="index.html">Home</a>
+            <a href="#service">Services</a>
+            <a href="project.html">Projects</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contact.html">Contacts</a>
+        </div>
+    </header>
+
+    <!-- nav bar code -->
+    
+    <!-- contact code -->
+    <section class="contactmainbox">
+        <h1>Contact Us
+            <hr />
+        </h1>
+        <div class="contact">
+            <div class="contact1">
+                <div class="contactlist">
+                    <div class="list">
+                        <div class="contactlogo">
+                            <ion-icon name="navigate"></ion-icon>
+                        </div>
+                        <div class="contacttext">
+                            <h2>Address</h2>
+                            <p>Coimbatore - 641016</p>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="contactlogo">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </div>
+                        <div class="contacttext">
+                            <h2>Linkedin</h2>
+                            <a href="">Squidnova</a>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="contactlogo">
+                            <ion-icon name="mail"></ion-icon>
+                        </div>
+                        <div class="contacttext">
+                            <h2>Email</h2>
+                            <a href="mailto:squidnova04@gmail.com">squidnova04@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact2">
+                <form action="">
+                    <div class="formitem">
+                        <label for="names">Name</label>
+                        <input type="text" name="names" id="names" placeholder="Your Name">
+                    </div>
+                    <div class="formitem">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="emailid" placeholder="Your Email">
+                    </div>
+                    <div class="formitem">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject" placeholder="subject">
+                    </div>
+                    <div class="formitem">
+                        <label for="message">Message</label>
+                        <textarea name="Message" id="Message" placeholder="Message"></textarea>
+                    </div>
+                    <a href="" onclick="sendEmail()">Submit</a>
+                </form>
+            </div>
+        </div>            
+    </section>
+
+    <footer class="copyrights">
+        <p>&copy; 2021 SquidNova. All Rights Reserved</p>
+    </footer>
 </body>
-</html>
+</html>     
