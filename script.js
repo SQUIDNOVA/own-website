@@ -1,20 +1,10 @@
- document.onscroll = () => {
-    if (window.scrollY > 0) {
-        document.querySelector('.header').classList.add('active');
-    }
-    else {
-        document.querySelector('.header').classList.remove('active');
-    }
-};
-document.onload = () => {
-    if (window.scrollY > 0) {
-        document.querySelector(".header").classList.add('active');
-    }
-    else {
-        document.querySelector('.header').classList.remove('active');
-    }; I
-}
-
+// ======================================================================= nav bar code =============================================================================================
+ 
+let menu = document.querySelector('.btn')
+let menulist = document.querySelector('.elements')
+menu.addEventListener('click', ()=>{
+    menulist.classList.toggle('showlist')
+})
 
 // ======================================================================= Email code =============================================================================================
 
@@ -36,3 +26,4 @@ function sendEmail() {
             alert("Error sending email: " + error);
         });
 }
+
