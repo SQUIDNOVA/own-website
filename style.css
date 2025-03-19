@@ -437,6 +437,7 @@ body
         margin: 4%;
         box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
         border-radius: 1rem;
+        background-color: var(--clr-teal);
     }
 
     .teamblock img
