@@ -66,7 +66,6 @@ body
         display: flex;
         justify-content:flex-start;
         align-items: center;
-        gap: 1rem;
         padding: .3rem;
         background-color: var(--clr-gunmetal);
     }
@@ -89,15 +88,18 @@ body
 
     .elements
     {
-        display: flex;
+        display: none;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        margin: 10% 0 5% 0;
         gap: 3rem;
-        margin-left: 190%;
     }
 
     .elements a
     {
-        display: none;
+        display: flex;
         margin-right: .5rem;
         font-size: 1.2rem;
         text-decoration: none;
@@ -106,7 +108,7 @@ body
 
     .showlist
     {
-        display: none;
+        display: flex;
     }
 
     .btn
@@ -443,7 +445,7 @@ body
     .teamblock img
     {
         border-radius: 1rem 1rem 0 0;
-        height: 35rem;
+        height: 30rem;
         width: 100%;
         object-fit: cover;
     }
@@ -688,7 +690,7 @@ body
         margin: 0 0 .4rem 1rem;
     }
 
-    form a
+    .formbtn
     {
         color: var(--clr-gunmetal);
         background-color: rgba(255, 255, 255, 0.3);
@@ -699,9 +701,10 @@ body
         text-align: center;
         transition: 0.3s;
         margin-top: 1rem;
+        border: none;
     }
 
-    form a:hover
+    .formbtn:hover
     {
         color: var(--clr-light-teal);
         background-color: rgb(2, 43, 58);
@@ -747,7 +750,11 @@ body
     .companydetailstop
     {
         display: flex;
+        justify-content: flex-start;
+        align-items: center;
         width: 100%;
+        gap: 1rem;
+        margin-bottom: 2%;
     }
 
     .companydetailstop img
@@ -840,7 +847,6 @@ body
         display: flex;
         justify-content:flex-start;
         align-items: center;
-        gap: 1rem;
         padding: .3rem;
         background-color: var(--clr-gunmetal);
     }
@@ -863,15 +869,18 @@ body
 
     .elements
     {
-        display: flex;
+        display: none;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: 10% 0 5% 0;
         gap: 3rem;
-        margin-left: 190%;
     }
 
     .elements a
     {
-        display: none;
+        display: flex;
         margin-right: .5rem;
         font-size: 1.2rem;
         text-decoration: none;
@@ -880,7 +889,7 @@ body
 
     .showlist
     {
-        display: none;
+        display: flex;
     }
 
     .btn
@@ -1446,7 +1455,7 @@ body
         margin: 0 0 .4rem 1rem;
     }
 
-    form a
+    .formbtn
     {
         color: var(--clr-gunmetal);
         background-color: rgba(255, 255, 255, 0.3);
@@ -1457,14 +1466,16 @@ body
         text-align: center;
         transition: 0.3s;
         margin-top: 1rem;
+        border: none;
     }
 
-    form a:hover
+    .formbtn:hover
     {
         color: var(--clr-light-teal);
         background-color: rgb(2, 43, 58);
         transform: translateY(-3px);
     }
+
 
     /* ============================================================= copyrights style mobile ===================================================================== */
 
@@ -1504,7 +1515,11 @@ body
     .companydetailstop
     {
         display: flex;
+        justify-content: flex-start;
+        align-items: center;
         width: 100%;
+        gap: 1rem;
+        margin-bottom: 2%;
     }
 
     .companydetailstop img
@@ -1611,13 +1626,13 @@ body
         border-radius: 3rem;
     }
 
-    .elementslist
+    .elements
     {
         display: flex;
-        gap: 1rem;
+        gap: 2rem;
     }
 
-    .elementslist a
+    .elements a
     {
         margin-right: .5rem;
         font-size: 1.2rem;
@@ -1628,6 +1643,11 @@ body
     .elementslist li
     {
         color: #f4f4f4;
+    }
+
+    .showlist
+    {
+        display: flex;
     }
 
     .btn
@@ -2202,7 +2222,7 @@ body
         margin: 0 0 .4rem 1rem;
     }
 
-    form a
+    .formbtn
     {
         color: var(--clr-gunmetal);
         background-color: rgba(255, 255, 255, 0.3);
@@ -2213,14 +2233,16 @@ body
         text-align: center;
         transition: 0.3s;
         margin-top: 1rem;
+        border: none;
     }
 
-    form a:hover
+    .formbtn:hover
     {
         color: var(--clr-light-teal);
         background-color: rgb(2, 43, 58);
         transform: translateY(-3px);
     }
+
 
     /*=========================================================== copyrights style ================================================================================*/
 
@@ -2259,7 +2281,11 @@ body
     .companydetailstop
     {
         display: flex;
+        justify-content: flex-start;
+        align-items: center;
         width: 100%;
+        gap: 1rem;
+        margin-bottom: 2%;
     }
 
     .companydetailstop img
@@ -2354,13 +2380,13 @@ body
         border-radius: 3rem;
     }
 
-    .elementslist
+    .elements
     {
         display: flex;
         gap: 1rem;
     }
 
-    .elementslist a
+    .elements a
     {
         margin-right: .5rem;
         font-size: 1.2rem;
@@ -2371,6 +2397,11 @@ body
     .elementslist li
     {
         color: #f4f4f4;
+    }
+
+    .showlist
+    {
+        display: flex;
     }
 
     .btn
@@ -2946,7 +2977,7 @@ body
         margin: 0 0 .4rem 1rem;
     }
 
-    form a
+    .formbtn
     {
         color: var(--clr-gunmetal);
         background-color: rgba(255, 255, 255, 0.3);
@@ -2957,14 +2988,16 @@ body
         text-align: center;
         transition: 0.3s;
         margin-top: 1rem;
+        border: none;
     }
 
-    form a:hover
+    .formbtn:hover
     {
         color: var(--clr-light-teal);
         background-color: rgb(2, 43, 58);
         transform: translateY(-3px);
     }
+
 
     /*=========================================================== copyrights style ================================================================================*/
 
@@ -3003,9 +3036,12 @@ body
     .companydetailstop
     {
         display: flex;
+        justify-content: flex-start;
+        align-items: center;
         width: 100%;
+        gap: 1rem;
+        margin-bottom: 2%;
     }
-
     .companydetailstop img
     {
         height: 2rem;

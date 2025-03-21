@@ -10,17 +10,16 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("coVHstLmfN0dQ_z-r");
-        })();
-    </script>
 
+
+    <!-- script codes -->
+
+    <script src="script.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <script src="script.js"></script>
+    <!-- script codes -->
 
 </head>
 <body>
@@ -116,24 +115,29 @@
                 </div>
             </div>
             <div class="contact2">
-                <form action="">
-                    <div class="formitem">
-                        <label for="names">Name</label>
-                        <input type="text" name="names" id="names" placeholder="Your Name">
-                    </div>
-                    <div class="formitem">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="emailid" placeholder="Your Email">
-                    </div>
-                    <div class="formitem">
-                        <label for="subject">Subject</label>
-                        <input type="text" name="subject" id="subject" placeholder="subject">
-                    </div>
-                    <div class="formitem">
-                        <label for="message">Message</label>
-                        <textarea name="Message" id="Message" placeholder="Message"></textarea>
-                    </div>
-                    <a href="" onclick="sendEmail()">Submit</a>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="6ae0c881-7ddf-4444-a9cc-d8689f270c6a">
+
+                    <label for="name">Name</label>
+                    <input type="text" name="name" required placeholder="Your Name">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required placeholder="Your Email">
+
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" required placeholder="Subject">
+
+                    <label for="message">Message</label>
+                    <textarea name="message" required placeholder="message"></textarea>
+                
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                    <!-- Custom Confirmation / Success Page -->
+                    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+                
+                    <button type="submit" class="formbtn">Submit Form</button>
+                
                 </form>
             </div>
         </div>            
