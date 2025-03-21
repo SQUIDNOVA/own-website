@@ -557,11 +557,11 @@ body
     .contactmainbox
     {
         display: flex;
-        height: 140vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        margin-top: 6%;
     }
 
     .contact
@@ -575,6 +575,7 @@ body
         background-color: var(--clr-teal);
         border-radius: 2rem;
         gap: 5rem;
+        margin-bottom: 5%;
     }
 
     .contact1
