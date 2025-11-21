@@ -12,5 +12,5 @@ export default defineConfig({
     },
   },
   plugins: [react(), tailwindcss()],
-  base: '/own-website'
+  base: process.env.VITE_BASE_PATH || "/own-website"
 })
