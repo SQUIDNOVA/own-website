@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "ethnocentric";
+  src: url("/fonts/Ethnocentric-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  @keyframes scrollBox {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes expandFormCenter {
+    0% {
+      opacity: 0;
+      clip-Path: inset(0 50% 0 50%);
+      transform: scale(0.95);
+    }
+    40%, -40% {
+      opacity: 0.4;
+      clip-Path: inset(0 50% 0 50%);
+      transform: scale(0.98);
+  }
+   70%, -70% {
+      opacity: 0.8;
+      clip-Path: inset(0 50% 0 50%);
+   }
+    100% {
+      opacity: 1;
+      clip-Path: inset(0 0 0 0);
+        transform: scale(1);
+    }
+  }
+  --animate-expandFormCenter: expandFormCenter 4.4s ease-out  infinite;
+  --animate-scrollBox: scrollBox 25s linear infinite;
+  --font-ethnocentric: "ethnocentric", sans-serif;
+  --color-darkblue: oklch(0.2433 0.0247 263.95);
+  --color-lightblue: oklch(0.5628 0.1177 251.96);
+  --color-darkyellow: oklch(0.8555 0.174878 88.0084);
+}
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-lightblue) var(--color-darkblue);
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
