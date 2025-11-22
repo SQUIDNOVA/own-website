@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Memberlist() {
   const memberDetails = [
     {
-      image: "src/assets/images/ceo&founder.jpeg",
+      image: "../../assets/images/ceo&founder.jpeg",
       imageAlt: "Founder and CEO",
       role: "Founder and CEO",
     },

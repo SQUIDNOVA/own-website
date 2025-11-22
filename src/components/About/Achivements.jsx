@@ -6,12 +6,12 @@ export default function Achivements() {
         {
             icon: '🚀',
             title: '24/7 Support',
-            description: 'Our dedicated team is here for you around the clock, ensuring your needs are met anytime, day or night.'
+            description: 'Developed a complete digital ecosystem that offers branding, design, strategy, marketing, and technology solutions under one roof — delivering everything a user needs in one place.'
         },
         {
             icon: '🚀',
-            title: 'Secure Document and Payments',
-            description: 'We safeguard your data with robust encryption, ensuring all your transactions and documents are protected.'
+            title: 'CUSTOMER ACHIEVEMENTS',
+            description: 'Earned the trust of customers through consistent quality, transparent communication, and friendly support — turning first-time users into long-term partners.'
         },
         {
             icon: '🚀',

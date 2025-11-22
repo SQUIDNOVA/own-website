@@ -9,7 +9,7 @@ export default function ProjectList() {
         description: `A car parking system integrated with a scanner is a tool that monitors and displays the occupancy status of parking spaces in real-time. 
           It uses the scanner data to update a dynamic interface, allowing users or operators to view which slots are available and which are occupied, 
           facilitating efficient parking management and guidance.`,
-        image: "src/assets/images/discusionPhoto.jpeg",
+        image: "../../assets/images/discusionPhoto.jpeg",
         gif: "src/assets/gif/login-page.gif",
         techStack: ["HTML", "CSS", "React.JS", "JSON"],
         projectLink: "/",

@@ -60,8 +60,8 @@ export default function ReviewAndForm() {
   }, []);
 
   return (
-    <section className=" bg-darkblue text-white/80 flex gap-6 p-4 sm:p-6 lg:p-[3%] ">
-      <div className=" w-1/2 ">
+    <section className=" bg-darkblue text-white/80 flex flex-col-reverse gap-6 p-4 sm:p-6 lg:p-[3%] ">
+      <div className=" sm:w-1/2 w-full ">
         <div className=" h-118 rounded-2xl p-[4%] overflow-y-auto scrollbar-hidden bg-lightblue/10 ">
           {responseData.map((data, index) => (
             <div
@@ -69,11 +69,6 @@ export default function ReviewAndForm() {
               className=" space-y-2 mb-[2.5%] p-4 bg-white/10 border border-white/30 rounded-2xl "
             >
               <div className=" flex items-center w-full gap-4 bg-lightblue/60 p-[1%] px-[2%] rounded-2xl ">
-                {/* <img
-                  src="src/assets/images/logo-removebg-preview.png"
-                  className=" h-10 w-10 rounded-full bg-white "
-                  alt=""
-                /> */}
                 <div className="  grid grid-rows-2  ">
                   <h2 className=" text-2xl font-bold ">{data.name}</h2>
                   <p className=" text-sm ">{data.email}</p>
@@ -84,15 +79,15 @@ export default function ReviewAndForm() {
           ))}
         </div>
       </div>
-      <div className=" w-1/2 px-[2%]">
+      <div className=" sm:w-1/2 w-full px-[2%]">
         <div className=" bg-white/10 border border-white/40 rounded-2xl  p-[4%] px-[6%] ">
-          <h1 className=" text-4xl text-white/80 ">Review Form</h1>
+          <h1 className=" text-lg sm:text-4xl text-white/80 ">Review Form</h1>
           <form onSubmit={handleSubmit} className=" space-y-5 ">
             <div className=" flex flex-col space-y-2 ">
-              <label className=" text-xl ">Name</label>
+              <label className=" text-md sm:text-xl ">Name</label>
               <input
                 type="text"
-                className=" bg-white text-black/80 outline-0 rounded-2xl text-lg p-[1.5%] "
+                className=" bg-white text-black/80 outline-0  rounded-lg sm:rounded-2xl text-md sm:text-lg p-[1.5%] "
                 placeholder=" Enter your name "
                 name="name"
                 value={userData.name}
@@ -100,10 +95,10 @@ export default function ReviewAndForm() {
               />
             </div>
             <div className=" flex flex-col space-y-2 ">
-              <label className=" text-xl ">Email Id</label>
+              <label className=" text-md sm:text-xl ">Email Id</label>
               <input
                 type="text"
-                className=" bg-white text-black/80 outline-0 rounded-2xl text-lg p-[1.5%] "
+                className=" bg-white text-black/80 outline-0  rounded-lg sm:rounded-2xl text-md sm:text-lg p-[1.5%] "
                 placeholder=" Enter your email "
                 name="email"
                 value={userData.email}
@@ -111,10 +106,10 @@ export default function ReviewAndForm() {
               />
             </div>
             <div className=" flex flex-col space-y-2 ">
-              <label className=" text-xl ">Message</label>
+              <label className=" text-md sm:text-xl ">Message</label>
               <textarea
                 type="text"
-                className=" bg-white text-black/80 outline-0 rounded-2xl text-lg p-[1.5%] "
+                className=" bg-white text-black/80 outline-0  rounded-lg sm:rounded-2xl text-md sm:text-lg p-[1.5%] "
                 placeholder=" Enter your message "
                 name="message"
                 value={userData.message}
