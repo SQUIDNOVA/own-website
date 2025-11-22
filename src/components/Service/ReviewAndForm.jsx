@@ -60,7 +60,7 @@ export default function ReviewAndForm() {
   }, []);
 
   return (
-    <section className=" bg-darkblue text-white/80 flex flex-col-reverse gap-6 p-4 sm:p-6 lg:p-[3%] ">
+    <section className=" bg-darkblue text-white/80 flex flex-col-reverse sm:flex-row gap-6 p-4 sm:p-6 lg:p-[3%] ">
       <div className=" sm:w-1/2 w-full ">
         <div className=" h-118 rounded-2xl p-[4%] overflow-y-auto scrollbar-hidden bg-lightblue/10 ">
           {responseData.map((data, index) => (
