@@ -1,11 +1,12 @@
+import SQLogo from "../../assets/images/squidnovaLogo-removebg-preview.png";
 
 export default function AboutCompany() {
   return (
-    <main className=" bg-darkblue/95 p-4 sm:p-6 lg:p-[2%] flex flex-col sm:flex-row gap-3 text-justify ">
+    <main className=" bg-darkblue/95 pt-20 p-4 sm:p-6 lg:p-[2%] flex flex-col sm:flex-row gap-3 text-justify ">
       <div className=" mt-[8%] flex flex-col sm:flex-row gap-3 text-justify ">
         <div className=" sm:w-2/3  flex flex-col space-y-2 ">
-          <h1 className=" text-xl sm:text-2xl font-bold text-gray-300 ">WHO ARE WE</h1>
-          <p className=" text-sm sm:text-xl md:text-lg lg:text-2xl text-white/70 leading-tight ">
+          <h1 className=" text-lg sm:text-2xl font-bold text-gray-300 ">WHO ARE WE</h1>
+          <p className=" text-xs  sm:text-xl md:text-lg lg:text-2xl text-white/70 leading-tight ">
             {`
               This startup began as a schoolboy’s dream. Inspired by a movie, he once thought, “Why can’t I start a business in the future?” 
               As time passed and he entered his teenage years, he doubted himself and set the idea aside to focus on his studies. 
@@ -27,7 +28,7 @@ export default function AboutCompany() {
         </div>
         <div className=" sm:w-1/3 ">
           <div className=" flex flex-col items-center ">
-            <img src="src/assets/images/squidnovaLogo-removebg-preview.png" alt=" company logo" />
+            <img src={SQLogo} alt=" company logo" className=" size-75 sm:size-full " />
           </div>
         </div>
       </div>

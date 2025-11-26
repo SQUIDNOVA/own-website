@@ -10,14 +10,14 @@ export default function Footer() {
                     <img
                         src={logo}
                         alt="Logo"
-                        className=" w-12 h-8 sm:w-14 sm:h-9 lg:w-16 lg:h-10 "
+                        className=" size-10 sm:size-14 lg:size-16 "
                     />
                     <h1 className=" text-xl sm:text-2xl lg:text-3xl font-bold ">SquidNova</h1>
                 </div>
                 <p className=" text-sm sm:text-base lg:text-lg ml-[2%] mt-2 ">We are Squidnova,Our mission is to provide the best services to our clients.</p>
                 <p className=" text-sm sm:text-base lg:text-lg ml-[2%] mt-2 ">"Smart Solutions. Real Impact.”</p>
             </div>
-            <div className=' w-full lg:w-1/2 flex flex-col sm:flex-row justify-around gap-6 sm:gap-4 '>
+            <div className=' w-full lg:w-1/2 grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-4 '>
                 <div className=" flex flex-col gap-2 sm:gap-3 ">
                     <h1 className=' text-lg sm:text-xl lg:text-2xl font-bold '>Company</h1>
                     <ol className=" flex flex-col gap-1 text-sm sm:text-base ">
@@ -36,7 +36,7 @@ export default function Footer() {
                         <li>Cloud Support</li>
                     </ol>
                 </div>
-                <div className=" flex flex-col gap-2 sm:gap-3 ">
+                <div className=" col-span-2 sm:col-span-1 flex flex-col gap-2 sm:gap-3 ">
                     <h1 className=' text-lg sm:text-xl lg:text-2xl font-bold '>Contact</h1>
                     <ol className=" flex flex-col gap-1 text-sm sm:text-base ">
                         <li>

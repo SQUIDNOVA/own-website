@@ -1,34 +1,43 @@
 import { useState } from "react";
+import founderPic from "../../assets/images/About/ceo&founder.jpeg";
+import webDevPic from "../../assets/images/About/WebSiteDevelopment.jpeg";
+import testingEngineerPic from "../../assets/images/About/TestingEngineer.jpeg";
+import logoDesignerPic from "../../assets/images/About/LogoDesigner.jpeg";
+import processorAnalystPic from "../../assets/images/About/ProcessorAnalyst.jpeg";
+import businessExecutivePic from "../../assets/images/About/BusinessExecutive.jpeg";
+import linkedin from "../../assets/images/About/linkedin.svg"
+import mail from "../../assets/images/About/mail.svg"
+import user from "../../assets/images/About/user.svg"
 
 export default function Memberlist() {
   const memberDetails = [
     {
-      image: "../../assets/images/ceo&founder.jpeg",
+      image: founderPic,
       imageAlt: "Founder and CEO",
       role: "Founder and CEO",
     },
     {
-      image: "src/assets/images/WebSiteDevelopment.jpeg",
+      image: webDevPic,
       imageAlt: "Interactive Web Specialist",
       role: "Interactive Web Specialist",
     },
     {
-      image: "src/assets/images/TestingEngineer.jpeg",
+      image: testingEngineerPic,
       imageAlt: "Application Test Engineer",
       role: "Application Test Engineer",
     },
     {
-      image: "src/assets/images/LogoDesigner.jpeg",
+      image: logoDesignerPic,
       imageAlt: "Graphic Identity Specialist",
       role: "Graphic Identity Specialist",
     },
     {
-      image: "src/assets/images/ProcessorAnalyst.jpeg",
+      image: processorAnalystPic,
       imageAlt: "Systems Optimization Analyst",
       role: "Systems Optimization Analyst",
     },
     {
-      image: "src/assets/images/BusinessExecutive.jpeg",
+      image: businessExecutivePic,
       imageAlt: "Business & Brand Developer",
       role: "Business & Brand Developer",
     },
@@ -125,9 +134,9 @@ export default function Memberlist() {
           {memberDetails.map((member, index) => (
             <div
               key={index}
-              className={`bg-darkblue text-white/80 w-71 sm:w-xs border border-white/15 flex flex-col items-center rounded-2xl
+              className={`bg-darkblue text-white/80 w-71 sm:w-sm border border-white/15 flex flex-col items-center rounded-2xl
                           transition-transform duration-300 cursor-pointer hover:shadow-lg hover:shadow-darkblue/90 hover:border-white/30
-                          ${ index === 0 ? "hover:bg-darkyellow hover:text-black" : "hover:bg-lightblue"}
+                          ${ index === 0 ? "bg-darkyellow lg:bg-darkblue lg:hover:bg-darkyellow hover:text-black" : "bg-lightblue lg:bg-darkblue lg:hover:bg-lightblue"}
                           ${
                             index % 2 === 0
                               ? "group-hover:translate-y-5"
@@ -154,14 +163,14 @@ export default function Memberlist() {
           {/* CEO Modal */}
           {ceoMembers && (
             <div
-              className="fixed inset-0 bg-black/20 flex justify-center items-center z-50"
+              className="fixed inset-0 bg-black flex justify-center items-center z-50 px-[4%] "
               onClick={() => setCeoMembers(false)} // click outside closes modal
             >
               <div
                 onClick={(e) => e.stopPropagation()} // prevent close when clicking inside
                 className="bg-darkblue text-white/80 relative rounded-2xl p-6 w-full max-w-xl shadow-xl animate-fadeIn"
               >
-                <h1 className=" font-bold text-2xl ">Founder & CEO Members</h1>
+                <h1 className=" font-bold text-lg sm:text-2xl ">Founder & CEO Members</h1>
                 <div className=" scrollbar overflow-y-auto max-h-140 ">
                   {MemberDetailsLists.filter(value => value.role === "Founder & CEO").map((memberDetails, index) => (
                     <div
@@ -177,13 +186,13 @@ export default function Memberlist() {
                       </div>
                       <div className=" grid grid-cols-3 w-full place-content-center ">
                         <a className=" flex justify-center " href={memberDetails.as[0]}>
-                          <img src="src/assets/images/linkedin.svg" alt="" className=" h-10 w-10 " />
+                          <img src={linkedin} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[1]}>
-                          <img src="src/assets/images/mail.svg" alt="" className=" h-10 w-10 " />
+                          <img src={mail} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[2]}>
-                          <img src="src/assets/images/user.svg" alt="" className=" h-10 w-10 " />
+                          <img src={user} alt="" className=" h-10 w-10 " />
                         </a>
                       </div>
                     </div>
@@ -193,7 +202,7 @@ export default function Memberlist() {
                 {/* --- Close Button --- */}
                 <button
                   onClick={() => setCeoMembers(false)}
-                  className="absolute top-[4%] right-[5%]  text-2xl  text-red-700 rounded-lg transition"
+                  className="absolute top-[11%] right-[7%] sm:top-[4%] sm:right-[5%] text-lg sm:text-2xl  text-red-700 rounded-lg transition"
                 >
                   X
                 </button>
@@ -226,13 +235,13 @@ export default function Memberlist() {
                       </div>
                       <div className=" grid grid-cols-3 w-full place-content-center ">
                         <a className=" flex justify-center " href={memberDetails.as[0]} >
-                          <img src="src/assets/images/linkedin.svg" alt="" className=" h-10 w-10 " />
+                          <img src={linkedin} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={`mailto:${memberDetails.as[1]}`} >
-                          <img src="src/assets/images/mail.svg" alt="" className=" h-10 w-10 " />
+                          <img src={mail}  alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[2]} >
-                          <img src="src/assets/images/user.svg" alt="" className=" h-10 w-10 " />
+                          <img src={user} alt="" className=" h-10 w-10 " />
                         </a>
                       </div>
                     </div>
@@ -275,13 +284,13 @@ export default function Memberlist() {
                       </div>
                       <div className=" grid grid-cols-3 w-full place-content-center ">
                         <a className=" flex justify-center " href={memberDetails.as[0]}>
-                          <img src="src/assets/images/linkedin.svg" alt="" className=" h-10 w-10 " />
+                          <img src={linkedin} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[1]}>
-                          <img src="src/assets/images/mail.svg" alt="" className=" h-10 w-10 " />
+                          <img src={mail} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[2]}>
-                          <img src="src/assets/images/user.svg" alt="" className=" h-10 w-10 " />
+                          <img src={user} alt="" className=" h-10 w-10 " />
                         </a>
                       </div>
                     </div>
@@ -325,13 +334,13 @@ export default function Memberlist() {
                       </div>
                       <div className=" grid grid-cols-3 w-full place-content-center ">
                         <a className=" flex justify-center " href={memberDetails.as[0]}>
-                          <img src="src/assets/images/linkedin.svg" alt="" className=" h-10 w-10 " />
+                          <img src={linkedin} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[1]}>
-                          <img src="src/assets/images/mail.svg" alt="" className=" h-10 w-10 " />
+                          <img src={mail} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[2]}>
-                          <img src="src/assets/images/user.svg" alt="" className=" h-10 w-10 " />
+                          <img src={user} alt="" className=" h-10 w-10 " />
                         </a>
                       </div>
                     </div>
@@ -375,13 +384,13 @@ export default function Memberlist() {
                       </div>
                       <div className=" grid grid-cols-3 w-full place-content-center ">
                         <a className=" flex justify-center " href={memberDetails.as[0]} >
-                          <img src="src/assets/images/linkedin.svg" alt="" className=" h-10 w-10 " />
+                          <img src={linkedin} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[1]} >
-                          <img src="src/assets/images/mail.svg" alt="" className=" h-10 w-10 " />
+                          <img src="src" alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[2]} >
-                          <img src="src/assets/images/user.svg" alt="" className=" h-10 w-10 " />
+                          <img src={user} alt="" className=" h-10 w-10 " />
                         </a>
                       </div>
                     </div>
@@ -425,13 +434,13 @@ export default function Memberlist() {
                       </div>
                       <div className=" grid grid-cols-3 w-full place-content-center ">
                         <a className=" flex justify-center " href={memberDetails.as[0]} >
-                          <img src="src/assets/images/linkedin.svg" alt="" className=" h-10 w-10 " />
+                          <img src={linkedin} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[1]}   >
-                          <img src="src/assets/images/mail.svg" alt="" className=" h-10 w-10 " />
+                          <img src={mail} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[2]}   >
-                          <img src="src/assets/images/user.svg" alt="" className=" h-10 w-10 " />
+                          <img src={user} alt="" className=" h-10 w-10 " />
                         </a>
                       </div>
                     </div>

@@ -1,4 +1,5 @@
 import { useState, useMemo, useCallback } from "react";
+import projectBanner1 from "../../assets/images/discusionPhoto.jpeg"
 
 export default function ProjectList() {
   const projectCards = useMemo(
@@ -9,7 +10,7 @@ export default function ProjectList() {
         description: `A car parking system integrated with a scanner is a tool that monitors and displays the occupancy status of parking spaces in real-time. 
           It uses the scanner data to update a dynamic interface, allowing users or operators to view which slots are available and which are occupied, 
           facilitating efficient parking management and guidance.`,
-        image: "../../assets/images/discusionPhoto.jpeg",
+        image: projectBanner1,
         gif: "src/assets/gif/login-page.gif",
         techStack: ["HTML", "CSS", "React.JS", "JSON"],
         projectLink: "/",
@@ -20,7 +21,7 @@ export default function ProjectList() {
         description: `The Mentora project is an interactive platform that assesses user skills and career interests to recommend the most suitable 
           professional roles and future paths. It integrates features like quizzes and structured assessments to gather data, uses JSON to manage and 
           process user profiles and guidance information, and leverages React.js to deliver personalized mentorship recommendations and track progress.`,
-        image: "src/assets/images/discusionPhoto.jpeg",
+        image: projectBanner1,
         gif: "src/assets/gif/login-page.gif",
         techStack: ["HTML", "CSS", "React.JS", "JSON"],
         projectLink: "/",
@@ -32,7 +33,7 @@ export default function ProjectList() {
           Applicant Tracking System (ATS) scoring functionality. It performs automated checks on critical factors like font usage, document alignment, 
           and structural integrity to maximize the resume's score, ensuring professional presentation and compliance for digital submissions, 
           with all data managed locally using JSON.`,
-        image: "src/assets/images/discusionPhoto.jpeg",
+        image: projectBanner1,
         gif: "src/assets/gif/login-page.gif",
         techStack: ["HTML", "tailwindcss", "reactjs", "JSON"],
         projectLink: "/",
@@ -43,7 +44,7 @@ export default function ProjectList() {
         description: `The Private Security Management System  project is a dynamic and responsive web-based application designed to automate 
           the process of booking, managing, and verifying security personnel. It eliminates manual operations, ensures secure data handling, 
           and provides real-time management for both users and administrators.`,
-        image: "src/assets/images/discusionPhoto.jpeg",
+        image: projectBanner1,
         gif: "src/assets/gif/login-page.gif",
         techStack: ["HTML", "tailwindcss", "reactjs", "JSON"],
         projectLink: "/",
@@ -54,7 +55,7 @@ export default function ProjectList() {
         description: `CONNECT 360 is a location-based information platform designed to help students easily find essential services around their area.
                       The system allows users to create an account, enter their personal and college details, select their location, 
                       and instantly view all shops, malls, temples, stationery stores, textiles near by you.`,
-        image: "src/assets/images/discusionPhoto.jpeg",
+        image: projectBanner1,
         gif: "src/assets/gif/login-page.gif",
         techStack: ["HTML", "tailwindcss", "reactjs", "JSON"],
         projectLink: "/",
@@ -64,7 +65,7 @@ export default function ProjectList() {
         title: "May I Help You",
         description: `This project is an advanced web platform that allows users to explore multiple companies and view complete details—including demo links—on a single, unified site. With its sleek design and user-friendly interface,
                       it delivers fast, organized, and up-to-date company information for an effortless browsing experience.`,
-        image: "src/assets/images/discusionPhoto.jpeg",
+        image: projectBanner1,
         gif: "src/assets/gif/login-page.gif",
         techStack: ["HTML", "tailwindcss", "js","JSON"],
         projectLink: "/",
@@ -144,7 +145,7 @@ export default function ProjectList() {
       </div>
       {modelOpen && selectedCard && (
         <div
-          className=" inset-0 bg-black/50 fixed flex justify-center items-center z-50 "
+          className=" inset-0 bg-black fixed flex justify-center items-center z-50 px-[5%] "
           onClick={() => setModelOpen(false)}
         >
           <div
@@ -152,18 +153,18 @@ export default function ProjectList() {
             className=" bg-darkblue p-6 pt-12 relative rounded-2xl grid grid-rows-[auto, 1fr] gap-5 w-full max-w-xl shadow-xl animate-fadeIn "
           >
             <div className=" flex flex-col gap-3 ">
-              <img
+              {/* <img
                 src={selectedCard.gif}
                 alt="project gif"
-                className=" h-90 w-full rounded-2xl border-4  border-white/40"
-              />
+                className=" sm:h-90 w-full rounded-2xl border-4  border-white/40"
+              /> */}
               <h1 className=" text-2xl ">{selectedCard.title}</h1>
               <p className=" text-base ">{selectedCard.description}</p>
               <div className="flex flex-wrap gap-2 sm:gap-4 mb-3 ">
                 {selectedCard.techStack.map((tech, idx) => (
                   <p
                     key={idx}
-                    className=" bg-lightblue/60 text-xs sm:text-sm text-white p-2 px-3 sm:p-[1.5%] sm:px-[2%] rounded-3xl "
+                    className=" bg-lightblue/60 text-10 sm:text-sm text-white p-2 px-3 sm:p-[1.5%] sm:px-[2%] rounded-3xl "
                   >
                     {tech}
                   </p>

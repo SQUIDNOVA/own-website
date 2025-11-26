@@ -118,7 +118,7 @@ export default function ServiceSwiper() {
   const currentService = serviceListData[currentIndex];
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-darkblue via-blue-900 to-lightblue flex items-center justify-center px-1 sm:p-4">
+    <div className="min-h-screen w-full bg-gradient-to-br from-darkblue via-blue-900 to-lightblue flex items-center justify-center px-1 sm:p-4 pt-[30%]">
       <div className=" w-full flex gap-2 justify-evenly items-center">
         {/* Navigation Buttons */}
         <button

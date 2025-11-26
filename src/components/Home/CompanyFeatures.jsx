@@ -26,11 +26,11 @@ export default function CompanyFeatures() {
     ];
 
   return (
-    <aside className=' bg-darkblue  flex flex-col gap-6 sm:gap-8 justify-center items-center p-4 sm:p-6 lg:p-[3%] '>
-        <h1 className=' text-5xl font-bold text-white/80 text-center  '>The Difference We Make</h1>
-        <div className=' flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-4 sm:gap-5 text-white w-full max-w-8xl'>
+    <aside className=' bg-darkblue  flex flex-col gap-6 sm:gap-8 justify-center items-center p-6 sm:p-6 lg:p-[3%] '>
+        <h1 className=' text-xl sm:text-5xl font-bold text-white/80 text-center  '>The Difference We Make</h1>
+        <div className=' grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 text-white w-full max-w-8xl'>
             {features.map((features, index) => (
-                <div key={index} className=' w-full sm:w-auto lg:w-1/4 grid grid-rows-[auto, 1fr, 1fr] bg-white/5 backdrop-blur-2xl border border-white/20 rounded-tl-[3rem] rounded-br-[3rem] 
+                <div key={index} className=' w-full grid grid-rows-[auto, 1fr, 1fr] bg-white/5 backdrop-blur-2xl border border-white/20 rounded-tl-[3rem] rounded-br-[3rem] 
                     p-6 sm:p-[3%] gap-3 sm:gap-4 
                     hover:scale-105 hover:rounded-[3rem]  hover:shadow-lg hover:shadow-black/30
                     transition-all duration-700 delay-150 ease-in

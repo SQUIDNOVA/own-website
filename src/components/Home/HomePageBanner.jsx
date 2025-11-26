@@ -7,7 +7,7 @@ export default function HomePageBanner() {
 
   return (
     <main
-        className="relative min-h-100 h-screen flex flex-col justify-center items-center text-white text-center px-4 sm:px-6 lg:px-8"
+        className="relative min-h-130 sm:h-screen flex flex-col justify-center items-center text-white text-center px-4 sm:px-6 lg:px-8"
         // style={{
         //     backgroundImage: `url("src/assets/images/discusionPhoto.jpeg")`,
         //     backgroundSize: 'cover',
