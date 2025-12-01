@@ -94,7 +94,7 @@ export default function ProjectList() {
     <section
       className=" bg-darkblue/95 text-white/80 flex justify-center items-center  "
     >
-      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-[7%]
+      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-[25%] sm:mt-[7%]
         gap-4 sm:gap-6 lg:gap-8 p-4 sm:p-6 lg:p-8 ">
         {projectCards.map((cards) => (
           <div
@@ -153,11 +153,6 @@ export default function ProjectList() {
             className=" bg-darkblue p-6 pt-12 relative rounded-2xl grid grid-rows-[auto, 1fr] gap-5 w-full max-w-xl shadow-xl animate-fadeIn "
           >
             <div className=" flex flex-col gap-3 ">
-              {/* <img
-                src={selectedCard.gif}
-                alt="project gif"
-                className=" sm:h-90 w-full rounded-2xl border-4  border-white/40"
-              /> */}
               <h1 className=" text-2xl ">{selectedCard.title}</h1>
               <p className=" text-base ">{selectedCard.description}</p>
               <div className="flex flex-wrap gap-2 sm:gap-4 mb-3 ">
@@ -179,7 +174,7 @@ export default function ProjectList() {
             </div>
             <button
               onClick={() => setModelOpen(false)}
-              className="absolute top-[1.3%] right-[4%] text-2xl  text-red-700 rounded-lg transition"
+              className="absolute top-[1.3%] right-[4%] text-2xl  text-red-700 rounded-full transition bg-red-500/20 md:bg-transparent md:hover:bg-red-500/20 px-3 py-1 "
             >
               X
             </button>

@@ -139,8 +139,8 @@ export default function Memberlist() {
                           ${ index === 0 ? "bg-darkyellow lg:bg-darkblue lg:hover:bg-darkyellow hover:text-black" : "bg-lightblue lg:bg-darkblue lg:hover:bg-lightblue"}
                           ${
                             index % 2 === 0
-                              ? "group-hover:translate-y-5"
-                              : " group-hover:-translate-y-5 "
+                              ? "md:group-hover:translate-y-5"
+                              : " md:group-hover:-translate-y-5 "
                           }
                       `}
               onClick={(e) => handlechanges(e, member)}
@@ -164,10 +164,10 @@ export default function Memberlist() {
           {ceoMembers && (
             <div
               className="fixed inset-0 bg-black flex justify-center items-center z-50 px-[4%] "
-              onClick={() => setCeoMembers(false)} // click outside closes modal
+              onClick={() => setCeoMembers(false)}
             >
               <div
-                onClick={(e) => e.stopPropagation()} // prevent close when clicking inside
+                onClick={(e) => e.stopPropagation()}
                 className="bg-darkblue text-white/80 relative rounded-2xl p-6 w-full max-w-xl shadow-xl animate-fadeIn"
               >
                 <h1 className=" font-bold text-lg sm:text-2xl ">Founder & CEO Members</h1>
@@ -177,7 +177,6 @@ export default function Memberlist() {
                       key={index}
                       className=" flex flex-col items-center mt-4 p-4 bg-white/10 border border-white/20 rounded-lg "
                     >
-                      {/* <img src="src/assets/images/contact-banner.jpg" alt={memberDetails.imageAlt} className=" h-100 " /> */}
                       <div className=" flex flex-col space-y-1 items-center justify-center ">
                         <h2 className=" text-xl font-semibold ">
                           {memberDetails.name}
@@ -213,14 +212,14 @@ export default function Memberlist() {
           {/* Web Members Modal */}
           {webDevMembers && (
             <div
-              className="fixed inset-0 bg-black/20 flex justify-center items-center z-50"
-              onClick={() => setWebDevMembers(false)} // click outside closes modal
+              className="fixed inset-0 bg-black flex justify-center items-center z-50 px-[4%] "
+              onClick={() => setWebDevMembers(false)}
             >
               <div
-                onClick={(e) => e.stopPropagation()} // prevent close when clicking inside
+                onClick={(e) => e.stopPropagation()}
                 className="bg-darkblue text-white/80 relative rounded-2xl p-6 w-full max-w-xl shadow-xl animate-fadeIn"
               >
-                <h1 className=" font-bold text-2xl ">Interactive Web Specialist Members</h1>
+                <h1 className=" font-bold text-lg sm:text-2xl ">Web Developer Members</h1>
                 <div className=" scrollbar overflow-y-auto max-h-140 ">
                   {MemberDetailsLists.filter(value => value.role === "Interactive Web Specialist").map((memberDetails, index) => (
                     <div
@@ -234,13 +233,13 @@ export default function Memberlist() {
                         <p className=" text-base ">{memberDetails.role}</p>
                       </div>
                       <div className=" grid grid-cols-3 w-full place-content-center ">
-                        <a className=" flex justify-center " href={memberDetails.as[0]} >
+                        <a className=" flex justify-center " href={memberDetails.as[0]}>
                           <img src={linkedin} alt="" className=" h-10 w-10 " />
                         </a>
-                        <a className=" flex justify-center " href={`mailto:${memberDetails.as[1]}`} >
-                          <img src={mail}  alt="" className=" h-10 w-10 " />
+                        <a className=" flex justify-center " href={memberDetails.as[1]}>
+                          <img src={mail} alt="" className=" h-10 w-10 " />
                         </a>
-                        <a className=" flex justify-center " href={memberDetails.as[2]} >
+                        <a className=" flex justify-center " href={memberDetails.as[2]}>
                           <img src={user} alt="" className=" h-10 w-10 " />
                         </a>
                       </div>
@@ -251,7 +250,7 @@ export default function Memberlist() {
                 {/* --- Close Button --- */}
                 <button
                   onClick={() => setWebDevMembers(false)}
-                  className="absolute top-[4%] right-[5%]  text-2xl  text-red-700 rounded-lg transition"
+                  className="absolute top-[11%] right-[7%] sm:top-[4%] sm:right-[5%] text-lg sm:text-2xl  text-red-700 rounded-lg transition"
                 >
                   X
                 </button>
@@ -262,19 +261,19 @@ export default function Memberlist() {
           {/* Application Test Engineer Modal */}
           {TestingEngineerMembers && (
             <div
-              className="fixed inset-0 bg-black/20 flex justify-center items-center z-50"
-              onClick={() => setTestingEngineerMembers(false)} // click outside closes modal
+              className="fixed inset-0 bg-black flex justify-center items-center z-50 px-[4%] "
+              onClick={() => setTestingEngineerMembers(false)}
             >
               <div
-                onClick={(e) => e.stopPropagation()} // prevent close when clicking inside
+                onClick={(e) => e.stopPropagation()}
                 className="bg-darkblue text-white/80 relative rounded-2xl p-6 w-full max-w-xl shadow-xl animate-fadeIn"
               >
-                <h1 className=" font-bold text-2xl ">Application Test Engineer Members</h1>
-                <div className=" scrollbar overflow-y-auto max-h-145 ">
+                <h1 className=" font-bold text-lg sm:text-2xl ">Application Test Engineer Members</h1>
+                <div className=" scrollbar overflow-y-auto max-h-140 ">
                   {MemberDetailsLists.filter(value => value.role === "Application Test Engineer").map((memberDetails, index) => (
                     <div
                       key={index}
-                      className=" flex flex-col items-center space-y-3 mt-4 p-4 bg-white/10 border border-white/20 rounded-lg "
+                      className=" flex flex-col items-center mt-4 p-4 bg-white/10 border border-white/20 rounded-lg "
                     >
                       <div className=" flex flex-col space-y-1 items-center justify-center ">
                         <h2 className=" text-xl font-semibold ">
@@ -300,7 +299,7 @@ export default function Memberlist() {
                 {/* --- Close Button --- */}
                 <button
                   onClick={() => setTestingEngineerMembers(false)}
-                  className="absolute top-[4%] right-[5%]  text-2xl  text-red-700 rounded-lg transition"
+                  className="absolute top-[11%] right-[7%] sm:top-[4%] sm:right-[5%] text-lg sm:text-2xl  text-red-700 rounded-lg transition"
                 >
                   X
                 </button>
@@ -311,21 +310,20 @@ export default function Memberlist() {
           {/* Logo Creator Modal */}
           {LogoDesignerMembers && (
             <div
-              className="fixed inset-0 bg-black/20 flex justify-center items-center z-50"
-              onClick={() => setLogoDesignerMembers(false)} // click outside closes modal
+              className="fixed inset-0 bg-black flex justify-center items-center z-50 px-[4%] "
+              onClick={() => setLogoDesignerMembers(false)}
             >
               <div
-                onClick={(e) => e.stopPropagation()} // prevent close when clicking inside
+                onClick={(e) => e.stopPropagation()}
                 className="bg-darkblue text-white/80 relative rounded-2xl p-6 w-full max-w-xl shadow-xl animate-fadeIn"
               >
-                <h1 className=" font-bold text-2xl ">Graphic Identity Specialist Members</h1>
+                <h1 className=" font-bold text-lg sm:text-2xl ">Logo Designer Members</h1>
                 <div className=" scrollbar overflow-y-auto max-h-140 ">
                   {MemberDetailsLists.filter(value => value.role === "Graphic Identity Specialist").map((memberDetails, index) => (
                     <div
                       key={index}
                       className=" flex flex-col items-center mt-4 p-4 bg-white/10 border border-white/20 rounded-lg "
                     >
-                      {/* <img src="src/assets/images/contact-banner.jpg" alt={memberDetails.imageAlt} className=" h-100 " /> */}
                       <div className=" flex flex-col space-y-1 items-center justify-center ">
                         <h2 className=" text-xl font-semibold ">
                           {memberDetails.name}
@@ -350,7 +348,7 @@ export default function Memberlist() {
                 {/* --- Close Button --- */}
                 <button
                   onClick={() => setLogoDesignerMembers(false)}
-                  className="absolute top-[4%] right-[5%]  text-2xl  text-red-700 rounded-lg transition"
+                  className="absolute top-[11%] right-[7%] sm:top-[4%] sm:right-[5%] text-lg sm:text-2xl  text-red-700 rounded-lg transition"
                 >
                   X
                 </button>
@@ -361,21 +359,20 @@ export default function Memberlist() {
           {/* Web Members Modal */}
           {ProcessorAnalystMembers && (
             <div
-              className="fixed inset-0 bg-black/20 flex justify-center items-center z-50"
-              onClick={() => setProcessorAnalystMembers(false)} // click outside closes modal
+              className="fixed inset-0 bg-black flex justify-center items-center z-50 px-[4%] "
+              onClick={() => setProcessorAnalystMembers(false)}
             >
               <div
-                onClick={(e) => e.stopPropagation()} // prevent close when clicking inside
+                onClick={(e) => e.stopPropagation()}
                 className="bg-darkblue text-white/80 relative rounded-2xl p-6 w-full max-w-xl shadow-xl animate-fadeIn"
               >
-                <h1 className=" font-bold text-2xl ">Systems Optimization Analyst Members</h1>
+                <h1 className=" font-bold text-lg sm:text-2xl ">Processor Analyst Members</h1>
                 <div className=" scrollbar overflow-y-auto max-h-140 ">
                   {MemberDetailsLists.filter(value => value.role === "Systems Optimization Analyst").map((memberDetails, index) => (
                     <div
                       key={index}
                       className=" flex flex-col items-center mt-4 p-4 bg-white/10 border border-white/20 rounded-lg "
                     >
-                      {/* <img src="src/assets/images/contact-banner.jpg" alt={memberDetails.imageAlt} className=" h-100 " /> */}
                       <div className=" flex flex-col space-y-1 items-center justify-center ">
                         <h2 className=" text-xl font-semibold ">
                           {memberDetails.name}
@@ -383,13 +380,13 @@ export default function Memberlist() {
                         <p className=" text-base ">{memberDetails.role}</p>
                       </div>
                       <div className=" grid grid-cols-3 w-full place-content-center ">
-                        <a className=" flex justify-center " href={memberDetails.as[0]} >
+                        <a className=" flex justify-center " href={memberDetails.as[0]}>
                           <img src={linkedin} alt="" className=" h-10 w-10 " />
                         </a>
-                        <a className=" flex justify-center " href={memberDetails.as[1]} >
-                          <img src="src" alt="" className=" h-10 w-10 " />
+                        <a className=" flex justify-center " href={memberDetails.as[1]}>
+                          <img src={mail} alt="" className=" h-10 w-10 " />
                         </a>
-                        <a className=" flex justify-center " href={memberDetails.as[2]} >
+                        <a className=" flex justify-center " href={memberDetails.as[2]}>
                           <img src={user} alt="" className=" h-10 w-10 " />
                         </a>
                       </div>
@@ -400,7 +397,7 @@ export default function Memberlist() {
                 {/* --- Close Button --- */}
                 <button
                   onClick={() => setProcessorAnalystMembers(false)}
-                  className="absolute top-[4%] right-[5%]  text-2xl  text-red-700 rounded-lg transition"
+                  className="absolute top-[11%] right-[7%] sm:top-[4%] sm:right-[5%] text-lg sm:text-2xl  text-red-700 rounded-lg transition"
                 >
                   X
                 </button>
@@ -411,21 +408,20 @@ export default function Memberlist() {
           {/* Web Members Modal */}
           {BusinessAndMarketingExecutiveMembers && (
             <div
-              className="fixed inset-0 bg-black/20 flex justify-center items-center z-50"
-              onClick={() => setBusinessAndMarketingExecutiveMembers(false)} // click outside closes modal
+              className="fixed inset-0 bg-black flex justify-center items-center z-50 px-[4%] "
+              onClick={() => setBusinessAndMarketingExecutiveMembers(false)}
             >
               <div
-                onClick={(e) => e.stopPropagation()} // prevent close when clicking inside
+                onClick={(e) => e.stopPropagation()}
                 className="bg-darkblue text-white/80 relative rounded-2xl p-6 w-full max-w-xl shadow-xl animate-fadeIn"
               >
-                <h1 className=" font-bold text-2xl ">Business & Brand Developer Members</h1>
+                <h1 className=" font-bold text-lg sm:text-2xl ">Business and Marketing Executive Members</h1>
                 <div className=" scrollbar overflow-y-auto max-h-140 ">
                   {MemberDetailsLists.filter(value => value.role === "Business & Brand Developer").map((memberDetails, index) => (
                     <div
                       key={index}
                       className=" flex flex-col items-center mt-4 p-4 bg-white/10 border border-white/20 rounded-lg "
                     >
-                      {/* <img src="src/assets/images/contact-banner.jpg" alt={memberDetails.imageAlt} className=" h-100 " /> */}
                       <div className=" flex flex-col space-y-1 items-center justify-center ">
                         <h2 className=" text-xl font-semibold ">
                           {memberDetails.name}
@@ -433,13 +429,13 @@ export default function Memberlist() {
                         <p className=" text-base ">{memberDetails.role}</p>
                       </div>
                       <div className=" grid grid-cols-3 w-full place-content-center ">
-                        <a className=" flex justify-center " href={memberDetails.as[0]} >
+                        <a className=" flex justify-center " href={memberDetails.as[0]}>
                           <img src={linkedin} alt="" className=" h-10 w-10 " />
                         </a>
-                        <a className=" flex justify-center " href={memberDetails.as[1]}   >
+                        <a className=" flex justify-center " href={memberDetails.as[1]}>
                           <img src={mail} alt="" className=" h-10 w-10 " />
                         </a>
-                        <a className=" flex justify-center " href={memberDetails.as[2]}   >
+                        <a className=" flex justify-center " href={memberDetails.as[2]}>
                           <img src={user} alt="" className=" h-10 w-10 " />
                         </a>
                       </div>
@@ -450,7 +446,7 @@ export default function Memberlist() {
                 {/* --- Close Button --- */}
                 <button
                   onClick={() => setBusinessAndMarketingExecutiveMembers(false)}
-                  className="absolute top-[4%] right-[5%]  text-2xl  text-red-700 rounded-lg transition"
+                  className="absolute top-[11%] right-[7%] sm:top-[4%] sm:right-[5%] text-lg sm:text-2xl  text-red-700 rounded-lg transition"
                 >
                   X
                 </button>
