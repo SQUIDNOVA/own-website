@@ -24,6 +24,7 @@ export default function NavBar() {
           alt="Logo"
           className="w-10 sm:w-16 cursor-pointer"
           onClick={() => navigate("/")}
+          onDoubleClick={() => navigate("/admin")}
         />
 
         {/* Desktop Links */}

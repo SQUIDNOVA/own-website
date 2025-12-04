@@ -1,15 +1,19 @@
-import Footer from "./components/Footer/Footer"
-import Links from "./components/Header/Links"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LayoutWrapper from "./components/Header/LayoutWrapper";
+import AdminDashboard from "./components/Admin/AdminDashboard";
 
-
-function App() {
-
+export default function App() {
   return (
-    <>
-      <Links />
-      <Footer />
-    </>
-  )
-}
+    <BrowserRouter>
+      <Routes>
 
-export default App
+        {/* Pages with Nav + Footer */}
+        <Route path="/*" element={<LayoutWrapper />} />
+
+        {/* Admin pages WITHOUT Nav + Footer */}
+        <Route path="/admin" element={<AdminDashboard />} />
+
+      </Routes>
+    </BrowserRouter>
+  );
+}
