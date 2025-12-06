@@ -187,7 +187,7 @@ export default function Memberlist() {
                         <a className=" flex justify-center " href={memberDetails.as[0]}>
                           <img src={linkedin} alt="" className=" h-10 w-10 " />
                         </a>
-                        <a className=" flex justify-center " href={memberDetails.as[1]}>
+                        <a className=" flex justify-center " href={`mailto:${memberDetails.as[1]}`}>
                           <img src={mail} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[2]}>
@@ -236,7 +236,7 @@ export default function Memberlist() {
                         <a className=" flex justify-center " href={memberDetails.as[0]}>
                           <img src={linkedin} alt="" className=" h-10 w-10 " />
                         </a>
-                        <a className=" flex justify-center " href={memberDetails.as[1]}>
+                        <a className=" flex justify-center " href={`mailto:${memberDetails.as[1]}`}>
                           <img src={mail} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[2]}>
@@ -285,7 +285,7 @@ export default function Memberlist() {
                         <a className=" flex justify-center " href={memberDetails.as[0]}>
                           <img src={linkedin} alt="" className=" h-10 w-10 " />
                         </a>
-                        <a className=" flex justify-center " href={memberDetails.as[1]}>
+                        <a className=" flex justify-center " href={`mailto:${memberDetails.as[1]}`}>
                           <img src={mail} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[2]}>
@@ -334,7 +334,7 @@ export default function Memberlist() {
                         <a className=" flex justify-center " href={memberDetails.as[0]}>
                           <img src={linkedin} alt="" className=" h-10 w-10 " />
                         </a>
-                        <a className=" flex justify-center " href={memberDetails.as[1]}>
+                        <a className=" flex justify-center " href={`mailto:${memberDetails.as[1]}`}>
                           <img src={mail} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[2]}>
@@ -383,7 +383,7 @@ export default function Memberlist() {
                         <a className=" flex justify-center " href={memberDetails.as[0]}>
                           <img src={linkedin} alt="" className=" h-10 w-10 " />
                         </a>
-                        <a className=" flex justify-center " href={memberDetails.as[1]}>
+                        <a className=" flex justify-center " href={`mailto:${memberDetails.as[1]}`}>
                           <img src={mail} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[2]}>
@@ -432,7 +432,7 @@ export default function Memberlist() {
                         <a className=" flex justify-center " href={memberDetails.as[0]}>
                           <img src={linkedin} alt="" className=" h-10 w-10 " />
                         </a>
-                        <a className=" flex justify-center " href={memberDetails.as[1]}>
+                        <a className=" flex justify-center " href={`mailto:${memberDetails.as[1]}`}>
                           <img src={mail} alt="" className=" h-10 w-10 " />
                         </a>
                         <a className=" flex justify-center " href={memberDetails.as[2]}>
