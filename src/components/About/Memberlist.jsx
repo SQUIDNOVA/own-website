@@ -136,7 +136,7 @@ export default function Memberlist() {
               key={index}
               className={`bg-darkblue text-white/80 w-71 sm:w-sm border border-white/15 flex flex-col items-center rounded-2xl
                           transition-transform duration-300 cursor-pointer hover:shadow-lg hover:shadow-darkblue/90 hover:border-white/30
-                          ${ index === 0 ? "bg-darkyellow lg:bg-darkblue lg:hover:bg-darkyellow hover:text-black" : "bg-lightblue lg:bg-darkblue lg:hover:bg-lightblue"}
+                          ${ index === 0 ? "bg-darkyellow  lg:bg-darkblue lg:hover:bg-darkyellow lg:hover:text-black" : "bg-lightblue lg:bg-darkblue lg:hover:bg-lightblue"}
                           ${
                             index % 2 === 0
                               ? "md:group-hover:translate-y-5"

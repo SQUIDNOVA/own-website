@@ -16,7 +16,7 @@ export default function AboutCompany() {
               “Why can’t I choose people from around me?” He decided to pick talented individuals from his own friend circle, as he believed strongly 
               in their abilities and trusted that their skills would help his dream grow. 
             `}
-            <span className=" text-lightblue/70 ">
+            <span className=" text-white/70 ">
               {`
                 Drawing inspiration from his creativity, marketing skills, and helping nature, he shaped a new vision — a company that supports users
                 from A to Z with ideas, innovation, and solutions. Though he faced many challenges, his determination kept the company standing strong to this day. 

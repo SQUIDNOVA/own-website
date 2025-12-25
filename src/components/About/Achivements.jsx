@@ -4,19 +4,16 @@ export default function Achivements() {
 
     const features = [
         {
-            icon: '🚀',
-            title: '24/7 Support',
-            description: 'Developed a complete digital ecosystem that offers branding, design, strategy, marketing, and technology solutions under one roof — delivering everything a user needs in one place.'
+            title: '5X',
+            description: 'Faster delivery of the website to the clients withthe perfect quality and connect there company witht he website.'
         },
         {
-            icon: '🚀',
-            title: 'CUSTOMER ACHIEVEMENTS',
-            description: 'Earned the trust of customers through consistent quality, transparent communication, and friendly support — turning first-time users into long-term partners.'
+            title: '25+',
+            description: 'Projects completed successfully, and delivered with excellence live website to handle there busnes in the effective ways.'
         },
         {
-            icon: '🚀',
-            title: 'Market Research',
-            description: 'We listen to customer needs to guide our development, analyze the market to ensure we offer something distinct, and test concepts to make thoughtful decisions.'
+            title: '20+ ',
+            description: 'Provide the best satisfaction to clients on a website by offering a clean, easy-to-use interface .'
         },
     ];
 
@@ -30,8 +27,7 @@ export default function Achivements() {
                     hover:scale-105 hover:rounded-[3rem]  hover:shadow-lg hover:shadow-black/30
                     transition-all duration-700 delay-150 ease-in
                     '>
-                    <span className=' bg-blue-600 p-[5%] px-[5.5%] flex justify-center items-center m-auto rounded-full text-2xl sm:text-3xl '>{features.icon}</span>
-                    <h2 className=' text-xl sm:text-2xl lg:text-3xl text-center font-bold '>{features.title}</h2>
+                    <h2 className=' text-xl sm:text-2xl lg:text-5xl text-left font-bold '>{features.title}</h2>
                     <p className=' text-base sm:text-lg lg:text-xl text-justify'>{features.description}</p>
                 </div>
             ))}

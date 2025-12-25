@@ -25,9 +25,8 @@ export default function ReviewAndForm() {
 
   const handleGetData = async () => {
     try {
-      await axiosInstance.get("/service").then((response) => {
-        setResponseData(response.data);
-      });
+      const response = await axiosInstance.get("/service");
+      setResponseData(response.data);
     } catch (error) {
       console.error(`Error on fetching data: ${error}`);
     }
@@ -66,15 +65,15 @@ export default function ReviewAndForm() {
           {responseData.map((data, index) => (
             <div
               key={index}
-              className=" space-y-2 mb-[2.5%] p-4 bg-white/10 border border-white/30 rounded-2xl "
+              className=" space-y-2 w-full mb-[2.5%] p-4 bg-white/10 border border-white/30 rounded-2xl "
             >
-              <div className=" flex items-center w-full gap-4 bg-lightblue/60 p-[1%] px-[2%] rounded-2xl ">
-                <div className="  grid grid-rows-2  ">
-                  <h2 className=" text-2xl font-bold ">{data.name}</h2>
-                  <p className=" text-sm ">{data.email}</p>
+              <div className=" flex items-center w-full gap-4 bg-lightblue/60 p-[1%] px-[4%] rounded-2xl ">
+                <div className="  grid grid-rows-2 space-y-0 place-content-center ">
+                  <h2 className=" text-xl sm:text-2xl font-bold ">{data.name}</h2>
+                  <p className=" text-xs sm:text-sm ">{data.email}</p>
                 </div>
               </div>
-              <p className=" text-lg ">{data.message}</p>
+              <p className=" text-sm sm:text-lg ">{data.message}</p>
             </div>
           ))}
         </div>

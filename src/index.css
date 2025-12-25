@@ -53,3 +53,34 @@
 .scrollbar-hidden {
   scrollbar-width: none;
 }
+
+:root {
+  /* Your color scheme */
+  --color-primary: oklch(0.2433 0.0247 263.95);    /* 60% - Dark blue */
+  --color-secondary: oklch(0.5628 0.1177 251.96);  /* 30% - Medium blue */
+  --color-accent: oklch(0.8555 0.174878 88.0084);  /* 10% - Yellow/lime */
+}
+
+.impact-gradient-1 {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+}
+
+.impact-gradient-2 {
+  background: linear-gradient(
+    135deg,
+    var(--color-secondary),
+    var(--color-accent)
+  );
+}
+
+.impact-gradient-3 {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent),
+    var(--color-primary)
+  );
+}

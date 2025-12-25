@@ -118,7 +118,7 @@ export default function ServiceSwiper() {
   const currentService = serviceListData[currentIndex];
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-darkblue via-blue-900 to-lightblue flex items-center justify-center px-1 sm:p-4 pt-[30%]">
+    <section className="min-h-screen w-full bg-linear-to-br from-darkblue via-blue-900 to-lightblue flex items-center justify-center px-1 sm:p-4 pt-[30%]">
       <div className=" w-full flex gap-2 justify-evenly items-center">
         {/* Navigation Buttons */}
         <button
@@ -214,70 +214,82 @@ export default function ServiceSwiper() {
       </div>
       {applicationForm && (
         <div
-          className=" inset-0 bg-black/50 fixed flex justify-center items-center z-50 "
+          className="inset-0 bg-black/50 fixed flex justify-center items-center z-50 p-3"
           onClick={() => setApplicationForm(false)}
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className=" bg-darkblue text-white/80 p-6 relative rounded-2xl grid grid-rows-[auto, 1fr] gap-5 w-full max-w-xl shadow-xl animate-fadeIn "
+            className="bg-darkblue text-white/80 p-4 sm:p-6 relative rounded-2xl w-full max-w-[calc(100%-1.5rem)] sm:max-w-md md:max-w-lg shadow-xl animate-fadeIn max-h-[90vh] overflow-y-auto"
           >
-            <h1 className=" text-2xl ">Application Form</h1>
-            <form className=" flex flex-col gap-4 " onSubmit={handleSubmit}>
-              <div className=" flex flex-col gap-2 ">
-                <label className=" font-bold text-lg " htmlFor="">Name</label>
+            <form className="flex justify-between items-center mb-4 sm:mb-6" onSubmit={handleSubmit}>
+              <h1 className="text-xl sm:text-2xl font-semibold">Application Form</h1>
+              <button
+                onClick={() => setApplicationForm(false)}
+                className="text-xl sm:text-2xl text-red-700 hover:text-red-600 transition p-1 leading-none"
+              >
+                X
+              </button>
+            </form>
+            
+            <div className="flex flex-col gap-3 sm:gap-4">
+              <div className="flex flex-col gap-1.5 sm:gap-2 w-full">
+                <label className="font-bold text-base sm:text-lg" htmlFor="name">Name</label>
                 <input 
+                  id="name"
                   type="text" 
                   placeholder="Enter your Name" 
-                  className=" bg-white text-black/80 p-2 rounded-md outline-0 "
+                  className="bg-white text-black/80 p-2 sm:p-2.5 rounded-md outline-0 text-sm sm:text-base"
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 />
               </div>
-              <div className=" flex flex-col gap-2 ">
-                <label className=" font-bold text-lg " htmlFor="">Email ID</label>
+              
+              <div className="flex flex-col gap-1.5 sm:gap-2 w-full">
+                <label className="font-bold text-base sm:text-lg" htmlFor="email">Email ID</label>
                 <input 
+                  id="email"
                   type="email" 
                   placeholder="Enter your Email Id" 
-                  className=" bg-white text-black/80 p-2 rounded-md outline-0 " 
+                  className="bg-white text-black/80 p-2 sm:p-2.5 rounded-md outline-0 text-sm sm:text-base" 
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
               </div>
-              <div className=" flex flex-col gap-2 ">
-                <label className=" font-bold text-lg " htmlFor="">Phone Number</label>
+              
+              <div className="flex flex-col gap-1.5 sm:gap-2 w-full">
+                <label className="font-bold text-base sm:text-lg" htmlFor="phone">Phone Number</label>
                 <input 
+                  id="phone"
                   type="text" 
                   placeholder="Enter your Phone Number" 
-                  className=" bg-white text-black/80 p-2 rounded-md outline-0 " 
+                  className="bg-white text-black/80 p-2 sm:p-2.5 rounded-md outline-0 text-sm sm:text-base" 
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 />
               </div>
-              <div className=" flex flex-col gap-2 ">
-                <label className=" font-bold text-lg " htmlFor="">Select Your Service</label>
+              
+              <div className="flex flex-col gap-1.5 sm:gap-2 w-full">
+                <label className="font-bold text-base sm:text-lg" htmlFor="service">Select Your Service</label>
                 <select 
-                  name=""  
-                  id="" 
-                  className=" bg-white text-black/80 p-2 rounded-md outline-0 "
+                  id="service"
+                  className="bg-white text-black/80 p-2 sm:p-2.5 rounded-md outline-0 text-sm sm:text-base"
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                  defaultValue=""
                 >
-                  <option value="" disabled selected>Select a service</option>
+                  <option value="" disabled>Select a service</option>
                   {serviceListData.map((service, index) => (
                     <option key={index} value={service.title}>{service.title}</option>
                   ))}
                 </select>
               </div>
+              
               <button 
-                type="submit"
-                className=" p-[2%] bg-darkyellow/80 hover:bg-darkyellow rounded-md "
-              >Submit</button>
-            </form>
-            <button
-              onClick={() => setApplicationForm(false)}
-              className="absolute top-[9%] right-[5%]  text-2xl  text-red-700 rounded-lg transition"
-            >
-              X
-            </button>
+                onClick={handleSubmit}
+                className="p-2.5 sm:p-3 bg-yellow-600 hover:bg-yellow-700 rounded-md w-full font-medium text-white mt-2 text-sm sm:text-base transition-colors"
+              >
+                Submit
+              </button>
+            </div>
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 }
