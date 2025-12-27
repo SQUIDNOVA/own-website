@@ -32,6 +32,11 @@ export default function ContactBanner() {
       console.error("Error on posting data:", error);
       Swal.fire("Error", "Submission failed!", "error");
     }
+    setContactFormData({
+      name: "",
+      email: "",
+      message: ""
+    });
   };
 
   return (
