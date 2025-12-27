@@ -1,6 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import axiosInstance from "../../../axiosInstance";
+import Swal from "sweetalert2";
 
 export default function ContactBanner() {
+
+  const [contactFormData, setContactFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleInputChange = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setContactFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const postContactForm = async (e) => {
+    e.preventDefault();
+    if (!contactFormData.name || !contactFormData.email || !contactFormData.message) {
+      Swal.fire("Error", "Please fill in all fields before submitting the form.", "error");
+      return;
+    }
+    try {
+      await axiosInstance.post("/contact", contactFormData);
+      Swal.fire("Success", "Form submitted successfully!", "success");
+    } catch (error) {
+      console.error("Error on posting data:", error);
+      Swal.fire("Error", "Submission failed!", "error");
+    }
+  };
+
   return (
     <section
       className="w-full min-h-screen relative flex items-center justify-center text-white"
@@ -19,7 +52,7 @@ export default function ContactBanner() {
             <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-3xl p-8 sm:p-12 shadow-xl">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
                 Let's build something{" "}
-                <span className="bg-gradient-to-r from-emerald-300 via-cyan-300 to-sky-400 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-emerald-300 via-cyan-300 to-sky-400 bg-clip-text text-transparent">
                   remarkable
                 </span>
                 .
@@ -34,7 +67,7 @@ export default function ContactBanner() {
               <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
                 <a
                   href="/contact"
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500 to-cyan-400 text-slate-900 font-semibold px-5 py-3 rounded-lg shadow-lg hover:scale-[1.03] transition-transform"
+                  className="inline-flex items-center gap-3 bg-linear-to-r from-emerald-500 to-cyan-400 text-slate-900 font-semibold px-5 py-3 rounded-lg shadow-lg hover:scale-[1.03] transition-transform"
                 >
                   <svg
                     className="w-5 h-5"
@@ -89,7 +122,7 @@ export default function ContactBanner() {
 
           {/* Quick contact card (compact, responsive) */}
           <div className="md:col-span-5 lg:col-span-4">
-            <div className="bg-gradient-to-tr from-white/6 to-white/3 border border-white/8 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-md transform hover:-translate-y-1 transition-transform">
+            <div className="bg-linear-to-tr from-white/6 to-white/3 border border-white/8 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-md transform hover:-translate-y-1 transition-transform">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-lg font-semibold">Quick contact</h3>
@@ -102,9 +135,12 @@ export default function ContactBanner() {
                 </div>
               </div>
 
-              <form className="mt-4 grid grid-cols-1 gap-3" onSubmit={(e) => e.preventDefault()}>
+              <form className="mt-4 grid grid-cols-1 gap-3" onSubmit={postContactForm}>
                 <input
                   type="text"
+                  value={contactFormData.name}
+                  name="name" 
+                  onChange={handleInputChange}
                   aria-label="Your name"
                   placeholder="Your name"
                   className="w-full bg-white/5 border border-white/6 rounded-md px-3 py-2 text-sm text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400"
@@ -112,18 +148,24 @@ export default function ContactBanner() {
                 <input
                   aria-label="Your email"
                   type="email"
+                  value={contactFormData.email}
+                  name="email" 
+                  onChange={handleInputChange}
                   placeholder="Email"
                   className="w-full bg-white/5 border border-white/6 rounded-md px-3 py-2 text-sm text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 />
                 <textarea
                   aria-label="Message"
+                  value={contactFormData.message}
+                  name="message" 
+                  onChange={handleInputChange}
                   placeholder="Short message..."
                   rows="3"
                   className="w-full bg-white/5 border border-white/6 rounded-md px-3 py-2 text-sm text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 resize-none"
                 />
                 <button
                   type="submit"
-                  className="mt-1 inline-flex items-center justify-center w-full bg-gradient-to-r from-emerald-500 to-cyan-400 text-slate-900 font-semibold px-4 py-2 rounded-md shadow hover:scale-[1.02] transition-transform"
+                  className="mt-1 inline-flex items-center justify-center w-full bg-linear-to-r from-emerald-500 to-cyan-400 text-slate-900 font-semibold px-4 py-2 rounded-md shadow hover:scale-[1.02] transition-transform"
                 >
                   Send
                 </button>
